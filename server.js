@@ -1,9 +1,8 @@
-
-const md5 = require('md5');
 const express = require('express');
-const bodyParser = require('body-parser');
 const https = require('https')
 const fs = require('fs')
+// const md5 = require('md5');
+// const bodyParser = require('body-parser');
 
 
 app.get('/', (req, res) => {
