@@ -1,2 +1,4 @@
 node_modules
 PRIVATEKEY.key
+server.key
+server.cert
