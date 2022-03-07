@@ -6,6 +6,7 @@ const port = 443
 // const md5 = require('md5');
 // const bodyParser = require('body-parser');
 
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send('Hello HTTPS!')
