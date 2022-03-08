@@ -21,14 +21,7 @@ app.get('/', (req, res) => {
   })
 
 
-// const port = 3000;
-// const app = express();
-
 // app.use(bodyParser.json());
-
-// app.get('/', (req, res)=>{
-//     res.send("Hello Browser");
-// });
 
 // app.post('/login', (req,res) =>{
 //     console.log(JSON.stringify(req.body));
