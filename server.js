@@ -5,7 +5,7 @@ const app = express()
 const port = 443
 const md5 = require('md5');
 const bodyParser = require('body-parser');
-var invalidLoginAttempts=0;
+let invalidLoginAttempts=0;
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
@@ -16,14 +16,14 @@ app.post('/login', (req,res) =>{
     if(invalidLoginAttempts>=5){
         res.status(401);//unauthorized
     }
-    console.log("Here is the password " + req.body.password)
-    if(req.body.userName =="faraguti" && md5(req.body.password)=="ed8d20de1864bc073df52d0fe74b9031"){
+    // console.log("Here is the password " + req.body.password)
+    else if(req.body.userName =="faraguti" && md5(req.body.password)=="ed8d20de1864bc073df52d0fe74b9031"){
         res.send("Welcome!")
     } else{
         invalidLoginAttempts++;
         console.log(invalidLoginAttempts+" invalid attempts")
         res.status(401);//unauthorized
-        res.send("Who are you?")
+        res.send("Who are you?")    
     }
 });
 
